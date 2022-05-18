@@ -1,0 +1,25 @@
+$portrait-phones-width: 576px;
+$tablets-width: 768px;
+$laptops-width: 992px;
+$large-devices-width: 1200px;
+
+@mixin portrait-phones {
+  @media (min-width: #{$portrait-phones-width}) {
+    @content;
+  }
+}
+@mixin tablets {
+  @media (min-width: #{$tablets-width}) {
+    @content;
+  }
+}
+@mixin laptops {
+  @media (min-width: #{$laptops-width}) {
+    @content;
+  }
+}
+@mixin large-devices {
+  @media (min-width: #{$large-devices-width}) {
+    @content;
+  }
+}

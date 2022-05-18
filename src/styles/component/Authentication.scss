@@ -1,0 +1,31 @@
+@use "../abstracts" as *;
+
+.authentication {
+  display: flex;
+  flex-direction: column;
+  color: $medium-gray;
+  @include tablets {
+    flex-direction: row;
+    margin-top: 0;
+  }
+
+  &__button {
+    display: block;
+    border: none;
+    background: none;
+    padding: 0.75rem 1.5rem;
+    color: inherit;
+    cursor: pointer;
+    &:hover {
+      color: $almost-black;
+    }
+
+    &--login {
+    }
+
+    &--register {
+      border: 1px solid $almost-black;
+      border-radius: 14px;
+    }
+  }
+}

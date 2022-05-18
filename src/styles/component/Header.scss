@@ -1,0 +1,53 @@
+@use "../abstracts" as *;
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 1rem;
+
+  @include tablets {
+    padding: 2rem 2.5rem;
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  &__brand {
+    display: block;
+    img {
+      display: block;
+      vertical-align: middle;
+    }
+  }
+
+  &__navigation.header__navigation {
+    display: none;
+    @include tablets {
+      display: flex;
+    }
+  }
+
+  &__authentication.header__authentication {
+    display: none;
+    @include tablets {
+      display: flex;
+    }
+  }
+
+  &__menu {
+    display: block;
+    border: none;
+    background: none;
+    cursor: pointer;
+    img {
+      vertical-align: center;
+    }
+    @include tablets {
+      display: none;
+    }
+  }
+}

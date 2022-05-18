@@ -1,0 +1,39 @@
+@use "../abstracts" as *;
+
+.dropdown {
+  color: $medium-gray;
+  position: relative;
+  &__toggle {
+    padding: 0;
+    border: none;
+    color: inherit;
+    background: none;
+  }
+
+  &__arrow-span {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 0.5rem;
+  }
+
+  &__menu {
+    padding-top: 0.5rem;
+    padding-inline: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding-left: 1rem;
+    white-space: nowrap;
+    color: $medium-gray;
+    @include tablets {
+      position: absolute;
+      top: (calc(100%));
+      right: 0;
+      background-color: $almost-white;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.19);
+      border-radius: 14px;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+  }
+}

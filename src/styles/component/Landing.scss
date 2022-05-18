@@ -1,0 +1,106 @@
+@use "../abstracts" as *;
+
+.landing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  @include tablets {
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 1rem;
+  }
+  @media (min-width: 1010px) {
+    gap: 2rem;
+  }
+
+  &__image {
+    width: min(100%, 700px);
+    img {
+      width: 100%;
+    }
+    @include tablets {
+      display: block;
+      width: clamp(380px, 35vw, 500px);
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+
+  &__content {
+    padding: 2rem 1rem;
+    text-align: center;
+    @include tablets {
+      padding: 0;
+      width: auto;
+      text-align: start;
+    }
+  }
+
+  &__title {
+    color: $almost-black;
+    font-size: 2.3rem;
+
+    @include tablets {
+      max-width: 11.3ch;
+      font-size: clamp(2.5rem, 6vw, 5.1rem);
+    }
+
+    @media (min-width: 970px) {
+      font-size: clamp(3.5rem, 7vw, 5.1rem);
+    }
+  }
+
+  &__body {
+    color: $medium-gray;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    @include tablets {
+      max-width: 45ch;
+      font-size: 1.1rem;
+    }
+    @media (min-width: 970px) {
+      font-size: 1.3rem;
+    }
+  }
+
+  &__cta {
+    border: 1px solid black;
+    background: $almost-black;
+    color: $almost-white;
+    padding: 1rem 1.5rem;
+    border-radius: 14px;
+    transition: 0.1s ease-out;
+    cursor: pointer;
+
+    &:hover {
+      border: 1px solid black;
+      background-color: $almost-white;
+      color: $almost-black;
+    }
+  }
+
+  &__clients {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 3rem;
+    padding: 0;
+    list-style: none;
+    @include tablets {
+      justify-content: flex-start;
+      gap: 1rem;
+    }
+  }
+
+  &__client-brand {
+    img {
+      display: block;
+      max-height: 30px;
+      max-width: 80px;
+    }
+  }
+}

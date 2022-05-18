@@ -1,0 +1,23 @@
+@use "../abstracts" as *;
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  right: 0;
+  background-color: $almost-white;
+  width: 60%;
+  height: 100%;
+  padding: 1.5rem;
+  &__close {
+    padding: 0;
+    border: none;
+    background: none;
+    align-self: flex-end;
+    cursor: pointer;
+
+    img {
+      display: block;
+    }
+  }
+}

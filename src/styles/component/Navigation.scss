@@ -1,0 +1,69 @@
+@use "../abstracts" as *;
+
+.navigation {
+  color: $medium-gray;
+  display: flex;
+  flex-direction: column;
+
+  @include tablets {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    margin-block: 1.5rem;
+    padding: 0;
+    list-style: none;
+    @include tablets {
+      gap: 1rem;
+      height: 100%;
+      margin-block: 0;
+      margin-left: 4.5rem;
+      flex-direction: row;
+    }
+  }
+
+  &__link-item {
+    display: block;
+    padding: 0.75rem;
+    color: inherit;
+    &:hover {
+      color: $almost-black;
+    }
+  }
+
+  &__dropdown-icon {
+    width: 14.75px;
+    vertical-align: middle;
+    margin-right: 0.5rem;
+  }
+
+  &__authentication {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    @include tablets {
+      flex-direction: row;
+      margin-top: 0;
+    }
+  }
+
+  &__auth-btns {
+    display: block;
+    border: none;
+    background: none;
+    padding: 0.75rem 1.5rem;
+    color: inherit;
+
+    &--login {
+    }
+
+    &--register {
+      border: 1px solid $almost-black;
+      border-radius: 14px;
+    }
+  }
+}
