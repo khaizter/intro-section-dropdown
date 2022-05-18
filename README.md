@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Github Repository](https://your-solution-url.com)
-- Live Site URL: [Github Page](https://your-live-site-url.com)
+- Solution URL: [Github Repository](https://github.com/khaizter/intro-section-dropdown)
+- Live Site URL: [Github Page](https://khaizter.github.io/intro-section-dropdown/)
 
 ## My process
 
