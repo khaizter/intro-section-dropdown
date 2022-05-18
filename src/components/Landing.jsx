@@ -3,7 +3,7 @@ import React from "react";
 
 const Landing = () => {
   return (
-    <div className="landing">
+    <main className="landing">
       <picture className="landing__image">
         <source
           srcSet="./images/image-hero-desktop.png"
@@ -44,7 +44,7 @@ const Landing = () => {
           </li>
         </ul>
       </div>
-    </div>
+    </main>
   );
 };
 
