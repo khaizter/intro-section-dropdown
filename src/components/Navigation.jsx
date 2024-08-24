@@ -2,10 +2,15 @@ import "../styles/component/Navigation.scss";
 import React from "react";
 import Dropdown from "../ui/Dropdown";
 
+import iconTodo from "../assets/icon-todo.svg";
+import iconCalendar from "../assets/icon-calendar.svg";
+import iconReminders from "../assets/icon-reminders.svg";
+import iconPlanning from "../assets/icon-planning.svg";
+
 const featuresDropdownItems = [
   <a href="#" className="navigation__link-item">
     <img
-      src="./images/icon-todo.svg"
+      src={iconTodo}
       alt=""
       className="navigation__dropdown-icon"
       aria-hidden="true"
@@ -14,7 +19,7 @@ const featuresDropdownItems = [
   </a>,
   <a href="#" className="navigation__link-item">
     <img
-      src="./images/icon-calendar.svg"
+      src={iconCalendar}
       alt=""
       className="navigation__dropdown-icon"
       aria-hidden="true"
@@ -23,7 +28,7 @@ const featuresDropdownItems = [
   </a>,
   <a href="#" className="navigation__link-item">
     <img
-      src="./images/icon-reminders.svg"
+      src={iconReminders}
       alt=""
       className="navigation__dropdown-icon"
       aria-hidden="true"
@@ -32,7 +37,7 @@ const featuresDropdownItems = [
   </a>,
   <a href="#" className="navigation__link-item">
     <img
-      src="./images/icon-planning.svg"
+      src={iconPlanning}
       alt=""
       className="navigation__dropdown-icon"
       aria-hidden="true"

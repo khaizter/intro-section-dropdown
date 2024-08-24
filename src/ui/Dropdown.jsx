@@ -1,5 +1,7 @@
 import "../styles/ui/Dropdown.scss";
 import React, { useState } from "react";
+import iconArrowUp from "../assets/icon-arrow-up.svg";
+import iconArrowDown from "../assets/icon-arrow-down.svg";
 
 const Dropdown = ({ toggleText, items, className = "" }) => {
   const [collapse, setCollapse] = useState(false);
@@ -13,7 +15,7 @@ const Dropdown = ({ toggleText, items, className = "" }) => {
       <button className="dropdown__toggle">
         {toggleText}
         <img
-          src={`./images/icon-arrow-${collapse ? "up" : "down"}.svg`}
+          src={`${collapse ? iconArrowUp : iconArrowDown}`}
           className="dropdown__arrow-span"
           alt=""
           aria-hidden="true"

@@ -4,6 +4,9 @@ import Menu from "./Menu";
 import Navigation from "./Navigation";
 import Authentication from "./Authentication";
 
+import logo from "../assets/logo.svg";
+import menuIcon from "../assets/icon-menu.svg";
+
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
 
@@ -39,13 +42,13 @@ const Header = () => {
     <header className="header">
       <div className="header__left">
         <a href="#" className="header__brand">
-          <img src="./images/logo.svg" alt="snap logo" />
+          <img src={logo} alt="snap logo" />
         </a>
         <Navigation className="header__navigation" />
       </div>
       <div className="header__right">
         <button className="header__menu" onClick={openMenuHandler}>
-          <img src="./images/icon-menu.svg" alt="menu" />
+          <img src={menuIcon} alt="menu" />
         </button>
 
         <Authentication className="header__authentication" />

@@ -1,15 +1,19 @@
 import "../styles/component/Landing.scss";
 import React from "react";
 
+import heroDesktop from "../assets/image-hero-desktop.png";
+import heroMobile from "../assets/image-hero-mobile.png";
+import clientDatabiz from "../assets/client-databiz.svg";
+import clientAudiophile from "../assets/client-audiophile.svg";
+import clientMeet from "../assets/client-meet.svg";
+import clientMaker from "../assets/client-maker.svg";
+
 const Landing = () => {
   return (
     <main className="landing">
       <picture className="landing__image">
-        <source
-          srcSet="./images/image-hero-desktop.png"
-          media="(min-width: 768px)"
-        />
-        <img src="./images/image-hero-mobile.png" alt="laptop-guy" />
+        <source srcSet={heroDesktop} media="(min-width: 768px)" />
+        <img src={heroMobile} alt="laptop-guy" />
       </picture>
       <div className="landing__content">
         <h1 className="landing__title">Make remote work</h1>
@@ -21,25 +25,22 @@ const Landing = () => {
         <ul className="landing__clients">
           <li>
             <a href="#" className="landing__client-brand">
-              <img src="./images/client-databiz.svg" alt="databiz brand" />
+              <img src={clientDatabiz} alt="databiz brand" />
             </a>
           </li>
           <li>
             <a href="#" className="landing__client-brand">
-              <img
-                src="./images/client-audiophile.svg"
-                alt="audiophile brand"
-              />
+              <img src={clientAudiophile} alt="audiophile brand" />
             </a>
           </li>
           <li>
             <a href="#" className="landing__client-brand">
-              <img src="./images/client-meet.svg" alt="meet brand" />
+              <img src={clientMeet} alt="meet brand" />
             </a>
           </li>
           <li>
             <a href="#" className="landing__client-brand">
-              <img src="./images/client-maker.svg" alt="maker brand" />
+              <img src={clientMaker} alt="maker brand" />
             </a>
           </li>
         </ul>
